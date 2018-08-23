@@ -67,3 +67,11 @@ The default 3DES management key (9B) is ```0102030405060708010203040506070801020
   $ ssh-add -L
   ```
   
+8. Alternatively, selectively add the PKCS11Provider to `~/.ssh/config`:
+  
+  ```
+  Host remote.example.com
+      PKCS11Provider /usr/local/lib/opensc-pkcs11.so
+      Port 22
+      User user
+  ```
