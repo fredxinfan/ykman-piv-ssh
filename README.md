@@ -22,7 +22,7 @@ MacOS
 $ brew install ykman
 ```
 
-For more ways to install `ykman`, please refer to the offical documentation [here](https://developers.yubico.com/yubikey-manager/).
+For more ways to install `ykman`, please refer to official documentation [here](https://developers.yubico.com/yubikey-manager/).
 
 ## Steps
 
@@ -31,6 +31,8 @@ For more ways to install `ykman`, please refer to the offical documentation [her
   ```
   $ ykman piv generate-key 9a public.pem
   ```
+
+  For full slots reference, please refer to official documentation [here](https://developers.yubico.com/PIV/Introduction/Certificate_slots.html).
 
 2. Create a self-signed certificate for that key: 
 
