@@ -6,6 +6,24 @@ The default PIN code is ```123456```. The default PUK code is ```12345678```.
 
 The default 3DES management key (9B) is ```010203040506070801020304050607080102030405060708```.
 
+## Installation
+
+Ubuntu
+
+```
+$ sudo apt-add-repository ppa:yubico/stable
+$ sudo apt update
+$ sudo apt install yubikey-manager
+```
+
+MacOS
+
+```
+$ brew install ykman
+```
+
+For more ways to install `ykman`, please refer to the offical documentation [here](https://developers.yubico.com/yubikey-manager/).
+
 ## Steps
 
 1. Generate a key in slot 9a: 
