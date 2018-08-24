@@ -37,7 +37,7 @@ For more ways to install `ykman`, please refer to official documentation [here](
 2. Create a self-signed certificate for that key: 
 
   ```
-  $ ykman piv generate-certificate 9a public.pem
+  $ ykman piv generate-certificate -s "/CN=SSH-key/" 9a public.pem
   ```
 
   If there is no error showing up, the generated certificate has already been imported to the YubiKey device automatically.
