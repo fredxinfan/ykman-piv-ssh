@@ -2,9 +2,9 @@
 
 ## YubiKey General information
 
-The default PIN code is ```123456```. The default PUK code is ```12345678```.
+The default PIN code is `123456`. The default PUK code is `12345678`.
 
-The default 3DES management key (9B) is ```010203040506070801020304050607080102030405060708```.
+The default 3DES management key (9B) is `010203040506070801020304050607080102030405060708`.
 
 ## Installation
 
@@ -60,13 +60,27 @@ For more ways to install `ykman`, please refer to official documentation [here](
   $ ssh -I $OPENSC_LIBS/opensc-pkcs11.so user@remote.example.com
   ```
   
-6. Change YubiKey device PIN if it's still using the default one. (Optional, but recommended)
+6. Change YubiKey device PIN, PUK and Management Key if they're still using default ones. (Optional, but highly recommended for security reasons)
 
   ```
   $ ykman piv change-pin
   ```
   
-  Enter the current PIN first, if it's default enter `123456`, then enter the new PIN twice to save it.
+  Enter current PIN first, if it's the default, enter `123456`, then enter the new PIN twice to save it.
+  
+  ```
+  $ ykman piv change-puk
+  ```
+  
+  Enter current PUK first, if it's the default, enter `12345678`, then enter the new PUK twice to save it.
+  
+  ```
+  $ ykman piv change-management-key
+  ```
+  
+  Enter current Management Key first, if it's the default, enter `010203040506070801020304050607080102030405060708`, then enter the new Management Key twice to save it.
+  
+  For more information about how are they being used, please refer to official documentation [here](https://developers.yubico.com/yubikey-piv-manager/PIN_and_Management_Key.html).
   
 7. Setup YubiKey to work with ssh-agent:
 
