@@ -24,7 +24,7 @@ $ brew install ykman
 
 For more ways to install `ykman`, please refer to official documentation [here](https://developers.yubico.com/yubikey-manager/).
 
-## Steps
+## Setup
 
 1. Change YubiKey device PIN, PUK and Management Key if they're still using default ones. (Optional, but highly recommended for security reasons)
 
@@ -109,3 +109,17 @@ For more ways to install `ykman`, please refer to official documentation [here](
       Port 22
       User user
   ```
+  
+## Debug
+
+Please, run the ssh-agent in debug mode to see what is the problem in your case:
+
+```
+ssh-agent -d -a ~/.agent.socket
+```
+
+and in different terminal try to add the card:
+
+```
+SSH_AUTH_SOCK=~/.agent.socket ssh-add -s /usr/local/lib/opensc-pkcs11.so
+```
